@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Content from './components/Content';
+import Clock from './components/Clock';
 import './index.css';
 
 
@@ -9,6 +10,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Header title='Timeline' />
+                <Clock />
                 <Content content={[
                     {
                       timestamp: new Date().getTime(),
