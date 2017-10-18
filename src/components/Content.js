@@ -8,7 +8,7 @@ export default class Content extends Component {
             <div className='content'>
                 {activities.map((activity,index)=>{
                     return(
-                        <ActivityItem activity={activity}/>
+                        <ActivityItem key={index} activity={activity}/>
                     );
                 })}
             </div>

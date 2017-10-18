@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Clock extends React.Component {
+export default class Clock extends Component {
     
     constructor(props) {
         super(props);
@@ -52,5 +52,3 @@ class Clock extends React.Component {
         )
     }
 }
-
-  export default Clock;
