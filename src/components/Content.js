@@ -1,35 +1,18 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ActivityItem from './ActivityItem';
 
-const Content = (props) => {
-    const propsContent = props.content;
-    return (
-        <div className='content'>
-        {propsContent.map((content,index)=>{
-            return(
-                <div className='item' key={content.user.name}>
-                    <div className='avatar'>
-                        <img alt={content.text} src={content.user.avatar} />
-                        {content.user.name}
-                    </div>
-                    <div className='time-wrapper'>
-                        <span className='time'>
-                        {content.timestamp}
-                        </span>
-                        <p>{content.text}</p>
-                    </div>
-                    
-                    <div className='commentCount'>
-                        {content.comments.length}
-                    </div>
-                </div>
-            );
-        })}
-            
-        </div>
-    );
+export default class Content extends Component {
+    render(){
+        const {activities} = this.props;
+        return(
+            <div className='content'>
+                {activities.map((activity,index)=>{
+                    return(
+                        <ActivityItem activity={activity}/>
+                    );
+                })}
+            </div>
+        );
+    }
 }
 
-
-
-
-export default Content;
